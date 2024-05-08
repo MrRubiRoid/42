@@ -6,18 +6,18 @@
 /*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:42:29 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/06 16:19:01 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/08 22:54:13 by nbalando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MY_LIB_FT
 # define MY_LIB_FT
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stddef.h>
-#include <stdint.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <stddef.h>
+# include <stdint.h>
 
 int				ft_isalpha(int c);
 
