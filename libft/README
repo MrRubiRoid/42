@@ -1,0 +1,35 @@
+OPEN SOME EVALUATION SLOTS!!!!
+
+
+
+
+
+                        THINGS TO CHECK
+
+1       IF THE NAME IS RIGHT AND IF YES THAN IF THE FILE NAME,
+        NAME IN THE HEADER, AND NAME OF THE FUNCTION IS SAME
+
+2       EVERYTHING INCLUDED RIGHT?
+
+
+
+
+
+# Add Docker's official GPG key:
+capt install apt-get update
+capt install apt-get install ca-certificates curl
+capt install  -m 0755 -d /etc/apt/keyrings
+capt install curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+capt install chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  capt install tee /etc/apt/sources.list.d/docker.list > /dev/null
+capt install apt-get update
+
+
+capt install apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+capt install docker run hello-world
