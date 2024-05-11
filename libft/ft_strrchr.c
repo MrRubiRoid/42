@@ -19,15 +19,16 @@ char	*ft_strrchr(const char *s, int c)
 	whatever = (char *)s;
 	while (*s)
 		s++;
-	while (s > whatever)
+	while (s >= whatever)
 	{
 		if (*s == (char)c)
 			return ((char *)s);
 		s--;
 	}
+	if (c == 0)
+		return ((char *)s);
 	return (0);
 }
-
 // #include <stdio.h>
 // int main(void)
 // {

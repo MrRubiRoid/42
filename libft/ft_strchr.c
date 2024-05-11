@@ -20,7 +20,9 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	return (NULL);
+	if (c == 0)
+		return ((char *)s);
+	return (0);
 }
 // #include <stdio.h>
 // int main(void)

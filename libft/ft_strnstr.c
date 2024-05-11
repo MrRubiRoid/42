@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 19:32:05 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/08 18:26:00 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/11 19:28:43 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char* big, const char *little, size_t len)
 {
 	size_t	b;
 	size_t	l;
-
-	if (little == NULL)
+	
+	if (!big && !little)
+		return (0);
+	if (little[0] == '\0')
 		return ((char *)big);
 	b = 0;
 	while (big[b] != 0)

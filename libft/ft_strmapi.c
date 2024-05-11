@@ -14,16 +14,17 @@
 
 char
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+	char *
+	ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int i;
-	char	*string;
+	char *string;
 
 	if (!s || !f)
 		return (NULL);
 	string = (char)malloc(strlen(s) * sizeof(char *));
-	if(!string)
-		return(NULL);
+	if (!string)
+		return (NULL);
 	i = 0;
 	while (string[i])
 	{
@@ -34,7 +35,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (string);
 }
 
-int	main(void)
+int main(void)
 {
 
 	ft_strmapi("qwerty", "b");
