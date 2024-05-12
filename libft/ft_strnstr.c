@@ -6,17 +6,17 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 19:32:05 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 19:28:43 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/12 04:24:01 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char* big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	b;
 	size_t	l;
-	
+
 	if (!big && !little)
 		return (0);
 	if (little[0] == '\0')

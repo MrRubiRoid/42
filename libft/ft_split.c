@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:12:05 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/02 22:29:37 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/12 08:10:58 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,19 +91,19 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-// int	main(void)
-// {
-// 	char	*test = " it is what it is";
-// 	char	a = ' ';
-// 	char	** result = ft_split(test, a);
-// 	int		i;
+int	main(void)
+{
+	char	*test = "is        ";
+	char	a = ' ';
+	char	** result = ft_split(test, ' ');
+	int		i;
 
-// 	i = 0;
-// 	while (result[i] != 0)
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
+	i = 0;
+	while (result[i] != 0)
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
 
-// 	return(0);
-// }
+	return(0);
+}

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:00:50 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 18:34:45 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/12 04:49:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int	num_len(int n)
 
 	buffer = n;
 	result = 1;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
 	{
 		buffer = buffer * (-1);
@@ -39,8 +41,6 @@ char	*ft_itoa(int n)
 	int		buffer;
 	char	*result;
 
-	if (n == -2147483648) 
-		return ("-2147483648");
 	buffer = n;
 	len = num_len(n);
 	result = (char *)ft_calloc((len + 1), sizeof(char));
@@ -48,12 +48,13 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n == 0)
 		result[0] = '0';
-	result[len] = '\0';
-	if (buffer < 0)
+	if (buffer < 0 && buffer > -2147483648)
 	{
 		buffer = buffer * (-1);
 		result[0] = '-';
 	}
+	if (n == -2147483648)
+		return (ft_memcpy(result, "-2147483648", 12));
 	while (buffer > 0 && len != 0)
 	{
 		result[len - 1] = (buffer % 10) + '0';
@@ -62,11 +63,10 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-
 // int	main(void)
 // {
 // 	printf("%s\n", ft_itoa(-123));
-// 	char *res = ft_itoa(-2147483648LL);
+// 	char *res = ft_itoa(0);
 // 	printf("%s\n", res);
 // 	return (0);
 // }

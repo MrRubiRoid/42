@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:17:19 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 19:56:20 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/12 08:09:37 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*substring;
 
-	if (start >= len) 
-		return (ft_strdup(""));
-	substring = (char *)malloc(len + 1);
-	if (!s || !substring)
-		return (NULL);
+	if (!s)
+		return (0);
+	if (start >= ft_strlen(s))
+		len = 0;
+	substring = (char *)ft_calloc((len + 1), sizeof(char));
+	if (!substring)
+		return (0);
 	i = 0;
 	while (i < len && *s != '\0')
 	{
@@ -34,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	char *str = "0123456789abcdefghij";
+// 	char *str = "";
 // 	char *result = ft_substr(str, 3, 30);
 // 	printf("%s\n", result);
 // 	return(0);

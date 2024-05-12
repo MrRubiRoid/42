@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:40:01 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/06 16:33:17 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/12 07:03:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*memory;
 	int		nbytes;
 
-	if (nmemb == 0 || size == 0 || size > SIZE_MAX / nmemb)
+	if (nmemb != 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
 	nbytes = nmemb * size;
+	if (nbytes == 0)
+		nbytes = 1;
 	memory = malloc(nbytes);
 	if (memory == NULL)
 		return (NULL);

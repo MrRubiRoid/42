@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:00 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 00:35:11 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/11 20:06:04 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > begin && ft_strchr(set, s1[end - 1]))
 		end--;
-	trimmed = (char *)ft_calloc(sizeof(char), (end - begin + 2));
+	trimmed = (char *)ft_calloc(sizeof(char), (end - begin + 1));
 	if (!trimmed)
 		return (NULL);
 	i = 0;

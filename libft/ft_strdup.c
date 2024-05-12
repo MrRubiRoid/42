@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:52:23 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 19:47:32 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/12 04:45:42 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	char	*copy;
 
 	copy = (char *)ft_calloc((ft_strlen(s) + 1), sizeof(char));
-	if (!copy) 
+	if (!copy)
 		return (0);
 	i = 0;
 	while (s[i] != '\0')
