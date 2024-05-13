@@ -6,18 +6,20 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:39:55 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/11 00:39:37 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/12 22:05:26 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	dest_len;
 	unsigned int	src_len;
 
+	if (!dest && src && !size)
+		return (ft_strlen(src));
 	src_len = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
@@ -36,11 +38,11 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 // #include <bsd/string.h>
 // int main (void)
 // {
-// 	char dest[20] = "123\0";
+// 	char *dest = NULL;
 // 	char *src = "qwerty";
-// 	int i = 20;
-// 	printf("%d\n", ft_strlcat(dest, src, i));
-// 	printf("%d\n", (int)strlcat(dest, src, i));
+// 	int i = 0;
+// 	printf("%d, %s, %s\n", ft_strlcat(dest, src, i), dest, src);
+// 	printf("%d, %s, %s\n", (int)strlcat(dest, src, i), dest, src);
 // 	return(0);
 // }
 // #include <stdio.h>

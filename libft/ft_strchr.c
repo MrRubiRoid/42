@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:12:02 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/02 22:29:36 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/13 05:54:48 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	chr;
+
+	chr = (unsigned char)(c % 256);
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == (char)chr)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0)
+	if (chr == 0)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
 // #include <stdio.h>
 // int main(void)
