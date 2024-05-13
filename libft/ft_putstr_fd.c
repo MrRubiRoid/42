@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:02:21 by codespace         #+#    #+#             */
-/*   Updated: 2024/05/13 03:21:41 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 14:09:00 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
+
 // int main(void)
 // {
 //     char *s = "qwerty";

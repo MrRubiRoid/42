@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:42:29 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/13 03:52:41 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 16:07:31 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 

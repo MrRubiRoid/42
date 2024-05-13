@@ -6,12 +6,11 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:00:50 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/12 04:49:59 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 11:52:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	num_len(int n)
 {
@@ -63,10 +62,12 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-// int	main(void)
+// int	main(int ac, char **av)
 // {
-// 	printf("%s\n", ft_itoa(-123));
-// 	char *res = ft_itoa(0);
-// 	printf("%s\n", res);
+// 	(void)ac;
+// 	printf("%s\n, %s\n, %s\n", ft_itoa(atoi(av[1])), ft_itoa(atoi(av[2])),
+		// ft_itoa(atoi(av[3])));
+// 	// char *res = ft_itoa(0);
+// 	// printf("%s\n", res);
 // 	return (0);
 // }

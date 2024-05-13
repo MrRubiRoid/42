@@ -6,12 +6,11 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 16:18:00 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/12 15:24:33 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 11:43:31 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 // void	ft_print_result(char const *s)
 // {
@@ -29,9 +28,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len;
 	char	*string;
 
-	len = ft_strlen(s);
 	if (!s || !f)
 		return (NULL);
+	len = ft_strlen(s);
 	string = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!string)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:50:47 by codespace         #+#    #+#             */
-/*   Updated: 2024/05/12 18:17:50 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 13:55:42 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 18:46:42 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/06 15:21:32 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/13 11:16:03 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	ft_atoi(const char *str)
 
 // int	main(int argc, char *argv[])
 // {
+// 	(void)argc;
 // 	int d = ft_atoi(argv[1]);
 // 	printf("%d\n", d);
 // 	return (0);

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:12:02 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/13 05:54:48 by codespace        ###   ########.fr       */
+/*   Updated: 2024/05/13 14:03:30 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	chr;
-
-	chr = (unsigned char)(c % 256);
-	while (*s)
+	while (*s != '\0')
 	{
-		if (*s == (char)chr)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (chr == 0)
+	if (*s == (char)c)
 		return ((char *)s);
-	return (NULL);
+	else
+		return (NULL);
 }
 // #include <stdio.h>
 // int main(void)

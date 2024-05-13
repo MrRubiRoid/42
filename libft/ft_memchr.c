@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbalando <nbalando@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 22:43:57 by nbalando          #+#    #+#             */
-/*   Updated: 2024/05/02 22:29:54 by nbalando         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:12:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)s_ptr);
 		s_ptr++;
 	}
-	return (0);
+	return (NULL);
 }
+
+// test for c = '\0'!!
+
 // #include <stdio.h>
 
 // int main(void)
 // {
+// 	void *ptr;
 // 	const char *a = "mthrfckr";
-// 	void *ptr = ft_memchr(a, 'h', 4);
+// 	ptr = ft_memchr(a, 'f', 4);
 // 	printf("%s\n", (char*)ptr);
 // 	return(0);
 // }

@@ -36,7 +36,7 @@ SRCS = ft_isalpha.c	\
 
 OBJS = $(SRCS:.c=.o)
 CC = cc
-CFLAGS = -g -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
